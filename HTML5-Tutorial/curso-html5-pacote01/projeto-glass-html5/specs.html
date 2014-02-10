@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<!--
+		<!DOCTYPE html> indica para o navegador que se trata de um html
+		<meta charset="UTF-8"/> define o UTF-8
+	-->
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Tudo sobre Google Glass</title>
+		<link rel="stylesheet" type="text/css" href="_css/estilo.css"/>		
+		<link rel="stylesheet" type="text/css" href="_css/specs.css">
+	</head>
+	<!--Define o caminho para o arquivo onde contêm os javascriptsS -->
+	<script language="javascript"src="_javascript/funcoes.js"></script>
+	<body>
+		<div id="interface"> 
+			
+			<header id="cabecalho">	
+				<hgroup>
+					<h1>Google Glass</h1>
+					<h2>A revolução do Google está chegando</h2>
+				<hgroup>
+				<img id="icone" src="_imagens/especificacoes.png">
+
+				<nav id="menu">
+					<h1>Menu Principal</h1>
+					<ul>
+						<li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="index.html">Home</a></li>
+						<li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="specs.html">Especificações</a></li>
+						<li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="fotos.html">Fotos</a></li>
+						<li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="multimidia.html">Multimídia</a></li>
+						<li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+					</ul>
+				</nav>
+				<!---
+					<header> sentido semantico de cabecalho
+					<hgroup> Agrupa texto
+					&nbsp; dá espaco em branco
+				-->
+			</header>
+
+<section id="corpo-full">
+<article id="noticia-principal">
+	<header id="cabecalho-artigo">
+		<hgroup>
+			<h3>Glass > Especificações</h3>
+			<h1> Raio-X no Goolge Glass</h1>
+			<h2>por Gustavo Guanabara</h2>
+			<h3 class="direita">Atualizado em 01/Maio/2013</h3>
+		</hgroup>
+	</header>
+<p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
+<section id="conteudo">
+<img src="_imagens/glass-esquema-marcado.jpg" usemap="#meumapa"/>
+<!--
+O map serve para permitir a interação com áreas de imagens
+- Na imagem é necessário indicar qual map é usado utilizando o usemap;
+- exitem 3 tipos de área no map
+	* rect: nas coordenadas do retângulo devem indicar o canto superior esquerdo e o canto inferior direito
+	* circle: nas coordenadas do círculo deve conter o ponto central do círculo e o raio
+	* poly: nas coordenadas do polígono deve conter os pontos que formem a imagem, não há número definido de pontos.
+- as áreas devem indicar a forma da imagem(shape), as coordenadas(coords), qual arquvivo deve ser carregado (href) quando houver a interação e onde deve ser carregado(target) 
+-->
+<map name="meumapa">
+	<area shape="rect" coords="179,202, 270,260" href="google-glass.html#tela" target="janela"/>
+	<area shape="circle" coords="158,243, 12" href="google-glass.html#camera" target="janela"/>
+	<area shape="circle" coords="73,53, 12" href="google-glass.html#gadgets" target="janela"/>
+	<area shape="poly" coords="28,143, 83,216, 84,249, 27,169 " href="google-glass.html#sensores" target="janela">
+</map>	
+<iframe src="google-glass.html" name="janela" id="frame-spec"></iframe>
+</section>
+</article>
+</section>
+
+	<footer id="rodape">
+				<!--&copy; coloca o símbolo copyright-->
+				<p>Copyright&copy; 2013 - by Gustavo Guanabara <br/>
+				<a href="http://facebook.com/cursosemvideo>" target ="_blank">Facebook</a> | 
+				<a href="http://twitter.com/cursosemvideo" target ="_blank">Twitter</a></p>
+			</footer>
+		</div>
+	</body>
+</html>
